@@ -14,5 +14,6 @@
  *= require refinery/formatting
  *= require refinery/theme
  *= require materialize
+ *= require material_icons
  *= require_self
  */
