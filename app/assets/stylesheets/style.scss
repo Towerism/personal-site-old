@@ -19,9 +19,21 @@
   @extend .light-blue, .text-lighten-1;
 }
 
-.social-btn {
-  padding: 3px;
+#social-icons {
   display: inline;
+}
+
+.social-padding {
+  display: inline;
+  padding: 3px;
+}
+
+.social-btn {
+  @extend .white;
+}
+
+.social-icon {
+  @extend .orange-text;
 }
 
 .bottom-bar {
