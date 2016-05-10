@@ -1,7 +1,21 @@
 {
-  "name": "",
-  "version": "",
+  "name": "personal-site",
+  "homepage": "https://github.com/Towerism/personal-site",
+  "authors": [
+    "Martin Fracker <martin.frackerjr@gmail.com>"
+  ],
+  "description": "Personal/professional website",
   "main": "",
-  "private": true,
-  "dependencies": {}
+  "license": "GPL",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mdi": "^1.5.54"
+  }
 }

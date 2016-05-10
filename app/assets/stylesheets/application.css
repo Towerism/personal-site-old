@@ -15,5 +15,6 @@
  *= require refinery/theme
  *= require materialize
  *= require material_icons
+ *= require mdi
  *= require_self
  */
