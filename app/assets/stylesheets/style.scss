@@ -6,9 +6,24 @@
  * Made By MaterializeCSS.com
  */
 
+@import "materialize";
+
 .icon-block {
   padding: 0 15px;
 }
 .icon-block .material-icons {
-	font-size: inherit;
+  font-size: inherit;
+}
+
+.top-bar {
+  @extend .light-blue, .text-lighten-1;
+}
+
+.social-btn {
+  padding: 3px;
+  display: inline;
+}
+
+.bottom-bar {
+  @extend .orange, .center-align;
 }
