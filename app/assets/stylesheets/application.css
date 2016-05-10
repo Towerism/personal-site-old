@@ -13,5 +13,6 @@
  *= require_tree .
  *= require refinery/formatting
  *= require refinery/theme
+ *= require materialize
  *= require_self
  */
