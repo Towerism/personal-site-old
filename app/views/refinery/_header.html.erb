@@ -1,6 +1,8 @@
-<nav class="top-bar" role="navigation">
-  <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><%=Refinery::Core::site_name %></a>
-    <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
-    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-  </div>
-</nav>
+<header>
+  <nav class="top-bar" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><%=Refinery::Core::site_name %></a>
+      <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</header>

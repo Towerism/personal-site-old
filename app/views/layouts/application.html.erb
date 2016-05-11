@@ -9,9 +9,7 @@
   <body id="<%= canonical_id @page %>">
     <%= site_bar -%>
     <div id="page_container">
-      <header id="header">
-        <%= render "/refinery/header" -%>
-      </header>
+      <%= render "/refinery/header" -%>
       <section id="page">
         <div class="container">
           <%= yield %>
