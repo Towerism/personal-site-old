@@ -19,6 +19,18 @@
   @extend .light-blue, .text-lighten-1;
 }
 
+.page {
+  padding-top: 35px;
+}
+
+.page-card {
+  @extend .light-blue, .lighten-4;
+}
+
+.page-content > p {
+  @extend .flow-text;
+}
+
 #social-icons {
   display: inline;
 }
