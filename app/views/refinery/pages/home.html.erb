@@ -1,0 +1,13 @@
+<div class="page row">
+  <div class="col s12 page-content">
+    <div class="row">
+      <div class="col s12 m2 center-align">
+        <%=raw @page.content_for(:side_body) %>
+      </div>
+      <div class="col s12 m10">
+        <h2 class="header"><%=raw @page.title %></h2>
+        <%=raw @page.content_for(:body) %>
+      </div>
+    </div>
+  </div>
+</div>
