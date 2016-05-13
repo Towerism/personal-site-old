@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/jfalameda/refinerycms-dynamicfields.git
+  revision: 63a4050e4aa82ee3272c1ad1f65797b1429190d9
+  specs:
+    refinerycms-dynamicfields (3.0.0)
+      nested_form
+      refinerycms-core (~> 3.0.0)
+
+GIT
   remote: https://github.com/refinery/refinerycms
   revision: 57ee41ae138e9b412d54025ecaa0627a37782df4
   branch: master
@@ -277,6 +285,7 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.12.0)
+    nested_form (0.3.2)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     orm_adapter (0.5.0)
@@ -444,6 +453,7 @@ DEPENDENCIES
   refinerycms-acts-as-indexed (~> 2.0, >= 2.0.0)
   refinerycms-authentication-devise (~> 1.0)
   refinerycms-blog!
+  refinerycms-dynamicfields!
   refinerycms-settings
   refinerycms-wymeditor (~> 1.0, >= 1.0.6)
   sass-rails (~> 5.0)

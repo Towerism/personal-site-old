@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160511033653) do
+ActiveRecord::Schema.define(version: 20160513045552) do
 
   create_table "refinery_authentication_devise_roles", force: :cascade do |t|
     t.string "title"
@@ -132,6 +132,40 @@ ActiveRecord::Schema.define(version: 20160511033653) do
   add_index "refinery_blog_posts", ["access_count"], name: "index_refinery_blog_posts_on_access_count"
   add_index "refinery_blog_posts", ["id"], name: "index_refinery_blog_posts_on_id"
   add_index "refinery_blog_posts", ["slug"], name: "index_refinery_blog_posts_on_slug"
+
+  create_table "refinery_dynamicfields_dynamicfields", force: :cascade do |t|
+    t.string   "criteria",    default: "page_layout"
+    t.string   "page_layout"
+    t.string   "page_id"
+    t.string   "model_title"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "refinery_dynamicfields_dynamicform_associations", force: :cascade do |t|
+    t.integer "dynamicfield_id"
+    t.integer "page_id"
+  end
+
+  create_table "refinery_dynamicfields_dynamicform_fields", force: :cascade do |t|
+    t.integer  "dynamicfield_id"
+    t.string   "field_id"
+    t.string   "field_label"
+    t.string   "field_type"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "refinery_dynamicfields_dynamicform_values", force: :cascade do |t|
+    t.integer "dynamicform_field_id"
+    t.integer "dynamicform_association_id"
+    t.text    "text_value"
+    t.integer "resource_id"
+    t.integer "image_id"
+    t.string  "string_value"
+  end
 
   create_table "refinery_image_translations", force: :cascade do |t|
     t.integer  "refinery_image_id", null: false

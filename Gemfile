@@ -74,3 +74,5 @@ gem 'refinerycms-authentication-devise', '~> 1.0'
 gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
 
 gem 'refinerycms-settings'
+
+gem 'refinerycms-dynamicfields', :git => 'https://github.com/jfalameda/refinerycms-dynamicfields.git'
