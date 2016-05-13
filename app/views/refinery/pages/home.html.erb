@@ -1,11 +1,13 @@
-<div class="page row">
+<div class="page"> 
   <div class="col s12 page-content">
     <div class="row">
-      <div class="col m12 l4">
-        <div class="center-align hide-on-large-only">
+      <div class="center-block hide-on-large-only">
+        <div class="center-align">
           <%=raw @page.content_for(:side_body) %>
         </div>
-        <div class="right-align hide-on-med-and-down">
+      </div>
+      <div class="col l4 hide-on-med-and-down">
+        <div class="right-align">
           <%=raw @page.content_for(:side_body) %>
         </div>
       </div>
