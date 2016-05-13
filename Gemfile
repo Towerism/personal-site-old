@@ -54,6 +54,7 @@ end
 group :production do
   gem 'pg'
   gem 'puma'
+  gem 'fog'
 end
 
 gem 'refinerycms', git: 'https://github.com/refinery/refinerycms', branch: 'master'
