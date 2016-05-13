@@ -444,6 +444,7 @@ DEPENDENCIES
   refinerycms-acts-as-indexed (~> 2.0, >= 2.0.0)
   refinerycms-authentication-devise (~> 1.0)
   refinerycms-blog!
+  refinerycms-settings
   refinerycms-wymeditor (~> 1.0, >= 1.0.6)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
