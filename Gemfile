@@ -55,6 +55,7 @@ group :production do
   gem 'pg'
   gem 'puma'
   gem 'fog'
+  gem 'dragonfly-s3_data_store'
 end
 
 gem 'refinerycms', git: 'https://github.com/refinery/refinerycms', branch: 'master'
