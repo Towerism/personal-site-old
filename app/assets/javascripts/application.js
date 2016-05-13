@@ -15,5 +15,4 @@
 //= require materialize-sprockets
 //= require turbolinks
 //= require jquery.turbolinks
-//= require gist-embed
 //= require_tree .
