@@ -1,0 +1,36 @@
+<% if post.live? %>
+  <div class="col s12 m6">
+    <div class="card hoverable">
+      <article class="blog_post" id="<%= dom_id(post) %>">
+        <div class="card-content flow-text">
+          <header>
+            <div class="card-title">
+              <h2><%= link_to post.title, refinery.blog_post_path(post) %></h2>
+            </div>
+          </header>
+          <section class='grey-text text-darken-2 clearfix'>
+            <% if blog_post_teaser_enabled? %>
+              <%= blog_post_teaser(post) %>
+            <% else %>
+              <%= post.body.html_safe %>
+            <% end %>
+          </section>
+        </div>
+        <div class="card-action">
+          <footer>
+            <p>
+              <% if blog_post_teaser_enabled? %>
+                <%= link_to t('read_more', :scope => 'refinery.blog.shared.posts'), refinery.blog_post_path(post) %>
+              <% end %>
+            </p>
+            <% if Refinery::Blog::Post.comments_allowed? %>
+              <aside class='comment_count'>
+                <%= link_to "#{t('title', :scope => 'refinery.blog.posts.show.comments')} (#{post.comments.approved.count})", refinery.blog_post_path(post) << '#comments' %>
+              </aside>
+            <% end %>
+          </footer>
+        </div>
+      </article>
+    </div>
+  </div>
+<% end %>
