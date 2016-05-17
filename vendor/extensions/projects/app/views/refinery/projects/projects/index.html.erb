@@ -1,4 +1,7 @@
 <% content_for :body do %>
+  <p class="flow-text">
+    Here's just a sample of the projects I have worked on.
+  </p>
   <% even_projects = @projects.values_at(* @projects.each_index.select(&:even?)) %>
   <% odd_projects = @projects.values_at(* @projects.each_index.select(&:odd?)) %>
   <div class="row">
@@ -18,5 +21,4 @@
     </div>
   </div>
 <% end %>
-
 <%= render '/refinery/content_page' %>
