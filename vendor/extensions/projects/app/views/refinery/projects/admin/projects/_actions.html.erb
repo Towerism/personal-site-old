@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::Projects::Admin::ProjectsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.projects_admin_projects_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_projects_admin_project_path, t('.create_new') %>
+  </li>
+<% if !searching? && ::Refinery::Projects::Admin::ProjectsController.sortable? && ::Refinery::Projects::Project.many? %>
+  <li>
+    <%= action_label :reorder,
+                     refinery.projects_admin_projects_path,
+                     t('.reorder', what:  "Projects"), id: 'reorder_action'%>
+    <%= action_label :reorder_done,
+                     refinery.projects_admin_projects_path,
+                      t('.reorder_done', what: "Projects"), id: 'reorder_action_done', class: 'hidden'%>
+  </li>
+<% end %>
+</ul>

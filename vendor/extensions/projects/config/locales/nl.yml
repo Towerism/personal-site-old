@@ -1,0 +1,30 @@
+nl:
+  refinery:
+    plugins:
+      projects:
+        title: Projects
+    projects:
+      admin:
+        projects:
+          actions:
+            create_new: Nieuwe Project toevoegen
+            reorder: De volgorde van de Projects wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Project-volgorde
+          records:
+            title: Projects
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Projects. Druk op 'Nieuwe Project toevoegen' om de eerste toe te voegen.
+          project:
+            view_live_html: Deze project op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze project
+            delete: Deze project definitief verwijderen
+      projects:
+        show:
+          other: Andere Projects
+  activerecord:
+    attributes:
+      'refinery/projects/project':
+        title: Title
+        link: Link
+        link_text: Link Text
+        description: Description

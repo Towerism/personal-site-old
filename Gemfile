@@ -76,3 +76,5 @@ gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', bra
 gem 'refinerycms-settings'
 
 gem 'refinerycms-dynamicfields', :git => 'https://github.com/jfalameda/refinerycms-dynamicfields.git'
+
+gem 'refinerycms-projects', path: 'vendor/extensions'

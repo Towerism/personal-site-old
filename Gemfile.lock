@@ -33,6 +33,13 @@ GIT
       refinerycms-settings (~> 3.0.0)
       seo_meta (~> 2.0.0.rc.1)
 
+PATH
+  remote: vendor/extensions
+  specs:
+    refinerycms-projects (1.0)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 3.0.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -454,6 +461,7 @@ DEPENDENCIES
   refinerycms-authentication-devise (~> 1.0)
   refinerycms-blog!
   refinerycms-dynamicfields!
+  refinerycms-projects!
   refinerycms-settings
   refinerycms-wymeditor (~> 1.0, >= 1.0.6)
   sass-rails (~> 5.0)

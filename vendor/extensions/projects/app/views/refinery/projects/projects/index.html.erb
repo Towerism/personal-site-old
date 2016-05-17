@@ -1,0 +1,22 @@
+<% content_for :body do %>
+  <% even_projects = @projects.values_at(* @projects.each_index.select(&:even?)) %>
+  <% odd_projects = @projects.values_at(* @projects.each_index.select(&:odd?)) %>
+  <div class="row">
+    <div class="col m12 l6">
+      <div class="row">
+        <% even_projects.each do |project| %>
+          <%= render 'refinery/projects/projects/project', :project => project %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col m12 l6">
+      <div class="row">
+        <% odd_projects.each do |project| %>
+          <%= render 'refinery/projects/projects/project', :project => project %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<%= render '/refinery/content_page' %>

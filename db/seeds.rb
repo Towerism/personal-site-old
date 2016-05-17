@@ -14,3 +14,6 @@ Refinery::Blog::Engine.load_seed
 
 # Added by Refinery CMS Dynamicfields extension
 Refinery::Dynamicfields::Engine.load_seed
+
+# Added by Refinery CMS Projects extension
+Refinery::Projects::Engine.load_seed

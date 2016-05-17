@@ -1,0 +1,30 @@
+tr:
+  refinery:
+    plugins:
+      projects:
+        title: Projects
+    projects:
+      admin:
+        projects:
+          actions:
+            create_new: Yeni Ekle Project
+            reorder: Tekrar sirala Projects
+            reorder_done: Tekrar siralama tamamlandiProjects
+          records:
+            title: Projects
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Projects yok henuz.  Tikla "Yeni Ekle Project" eklemek senin ilk project.
+          project:
+            view_live_html: Bunu canlu project goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle project
+            delete: Bunu Sil project sonsuza dek
+      projects:
+        show:
+          other: Diger Projects
+  activerecord:
+    attributes:
+      'refinery/projects/project':
+        title: Title
+        link: Link
+        link_text: Link Text
+        description: Description

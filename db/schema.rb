@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160513045552) do
+ActiveRecord::Schema.define(version: 20160517033935) do
 
   create_table "refinery_authentication_devise_roles", force: :cascade do |t|
     t.string "title"
@@ -255,6 +255,16 @@ ActiveRecord::Schema.define(version: 20160513045552) do
   add_index "refinery_pages", ["lft"], name: "index_refinery_pages_on_lft"
   add_index "refinery_pages", ["parent_id"], name: "index_refinery_pages_on_parent_id"
   add_index "refinery_pages", ["rgt"], name: "index_refinery_pages_on_rgt"
+
+  create_table "refinery_projects", force: :cascade do |t|
+    t.string   "title"
+    t.string   "link"
+    t.string   "link_text"
+    t.text     "description"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "refinery_resource_translations", force: :cascade do |t|
     t.integer  "refinery_resource_id", null: false
