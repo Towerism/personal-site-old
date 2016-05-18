@@ -3,8 +3,26 @@
 
   <% if @posts.any? %>
     <section id="blog_posts">
+      <% even_posts = @posts.values_at(* @posts.each_index.select(&:even?)) %>
+      <% odd_posts = @posts.values_at(* @posts.each_index.select(&:odd?)) %>
       <div class="row">
-        <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
+        <div class="row hide-on-large-only">
+          <div class="col s12">
+            <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
+          </div>
+        </div>
+        <div class="row hide-on-med-and-down">
+          <div class="col l6">
+            <div class="row">
+              <%= render :partial => "/refinery/blog/shared/post", :collection => even_posts %>
+            </div>
+          </div>
+          <div class="col l6">
+            <div class="row">
+              <%= render :partial => "/refinery/blog/shared/post", :collection => odd_posts %>
+            </div>
+          </div>
+        </div>
       </div>
       <%= will_paginate @posts %>
     </section>
