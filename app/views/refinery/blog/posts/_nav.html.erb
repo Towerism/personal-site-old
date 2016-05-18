@@ -1,0 +1,35 @@
+<div class="blog-nav-container">
+  <% if @post.prev.present? -%>
+    <div class="blog-nav">
+      <%= link_to refinery.blog_post_path(@post.prev) do %>
+        <div class="prev-article">
+          <div class="prev-article-content">
+            <div class="prev-article-link">
+              Previous
+            </div>
+            <div class="blog-nav-article-title">
+              <%= @post.prev.title %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end -%>
+
+  <% if @post.next.present? -%>
+    <div class="blog-nav">
+      <%= link_to refinery.blog_post_path(@post.next), :class => "article-button" do %>
+        <div class="next-article">
+          <div class="next-article-content">
+            <div class="next-article-link">
+              Next
+            </div>
+            <div class="blog-nav-article-title">
+              <%= @post.next.title %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end -%>
+</div>

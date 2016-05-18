@@ -1,0 +1,50 @@
+<aside id="comments">
+  <div class="comments-container">
+    <div class="comments">
+      <% if (comments = @post.comments.approved).any? %>
+        <%= render :partial => "comment", :collection => comments %>
+      <% end %>
+
+      <% if Refinery::Blog::Post.comments_allowed? %>
+
+        <% flash.each do |key, value| %>
+          <div id='flash' class="flash flash_<%= key %>">
+            <%= value %>
+          </div>
+        <% end %>
+
+        <div class="comment-form-container">
+          <div class="comment-form">
+            <div class="col s12">
+              <div class="leave-comment">
+                <%= t('add', :scope => 'refinery.blog.posts.show.comments') %>
+              </div>
+              <div class="row">
+                <%= form_for [refinery, :blog, @comment] do |f| %>
+                  <%= render "/refinery/admin/error_messages",
+                  :object => f.object,
+                  :include_object_name => true %>
+                  <div class='comment-field'>
+                    <%= f.text_field :name, :id => "name" %>
+                    <%= f.label :name, :for => "name" %>
+                  </div>
+                  <div class='comment-field'>
+                    <%= f.email_field :email, :id => "email" %>
+                    <%= f.label :email, :for => "email" %>
+                  </div>
+                  <div class='comment-field'>
+                    <%= f.text_area :message, :id => "comment", :class => "materialize-textarea" %>
+                    <%= f.label :message, :for => "comment" %>
+                  </div>
+                  <div class='comment-actions'>
+                    <%= f.submit t('submit', :scope => 'refinery.blog.posts.show'), :class => "btn waves-effect waves-light" %>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</aside>

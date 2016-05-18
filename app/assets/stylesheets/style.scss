@@ -8,6 +8,10 @@
 
 @import "materialize";
 
+body {
+  @extend .grey, .lighten-4;
+}
+
 .icon-block {
   padding: 0 15px;
 }
@@ -17,6 +21,10 @@
 
 .top-bar {
   @extend .light-blue, .text-lighten-1;
+}
+
+p {
+  padding-bottom: 1em;
 }
 
 .page {
@@ -29,6 +37,134 @@
 
 .page-content > p {
   @extend .flow-text;
+}
+
+#blog-post {
+  padding-top: 50px;
+}
+
+.post-container {
+  @extend .card, .z-depth-1;
+}
+
+.post-content {
+  @extend .container;
+  margin-top: 2em;
+} 
+
+.post-title {
+  @extend .card-title;
+  margin-top: -0.7em;
+}
+
+.posted-at {
+  @extend .grey-text, .text-lighten-1;
+  font-weight: 500;
+}
+
+.blog-author {
+  @extend .grey-text;
+}
+
+.post-body {
+  padding-top: 1em;
+}
+
+.filed-in {
+  @extend .flow-text;
+}
+
+.blog-nav-container {
+  @extend .row;
+}
+
+.blog-nav {
+  @extend .col, .s12, .m6;
+}
+
+.prev-article,
+.next-article {
+  @extend .card-panel, .hoverable;
+  width: 100%;
+}
+
+.next-article {
+  @extend .right-align;
+}
+
+.prev-article {
+  @extend .left-align;
+}
+
+.prev-article-content,
+.next-article-content {
+  @extend .card-content;
+}
+
+.next-article-link,
+.prev-article-link {
+  @extend .card-title;
+}
+
+.blog-nav-article-title {
+  @extend .grey-text, .text-darken-2;
+}
+
+.comments-container {
+  @extend .card;
+}
+
+.comments-header {
+}
+
+.comment-content {
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-bottom: -2em;
+}
+
+.comment-container {
+  @extend .card-action;
+}
+
+.comment-content {
+  @extend .row, .grey-text, .text-darken-2;
+}
+
+.comment-profile-pic {
+  @extend .col, .s2, .m1;
+}
+
+.comment-info {
+  @extend .col, .s10, .m11;
+}
+
+.comment-author,
+.comment-date,
+.comment-body {
+  padding-left: 1em;
+}
+
+.comment-date {
+  @extend .grey-text;
+}
+
+.leave-comment {
+  @extend .grey-text;
+  padding-bottom: 1em;
+}
+
+.comment-form-container {
+  @extend .card-action;
+}
+
+.comment-form {
+  @extend .row;
+  padding-top: 2em;
+}
+
+.comment-field, .comment-actions {
+  @extend .col, .s12, .input-field;
 }
 
 #social-icons {

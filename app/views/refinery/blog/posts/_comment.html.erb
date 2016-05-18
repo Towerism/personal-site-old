@@ -1,0 +1,22 @@
+<article class='blog-comment-message' id='<%= "comment-#{comment.to_param}" %>'>
+  <div class="comment-container">
+    <div class="comment-content">
+      <div class="comment-profile-pic">
+        <%= image_tag avatar_url(comment.email), :alt => comment.name, :class => 'avatar circle' %>
+      </div>
+      <div class="comment-main">
+        <div class="comment-info">
+          <div class="comment-author">
+            <%= t('by', :scope => 'refinery.blog.posts.comments', :who => comment.name) %>,
+          </div>
+          <div class="comment-date">
+            <%= t('time_ago', :scope => 'refinery.blog.posts.comments', :time => time_ago_in_words(comment.created_at)) %>
+          </div>
+          <div class="comment-body">
+            <%= simple_format auto_link(comment.message.to_s) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
