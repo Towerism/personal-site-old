@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <%= render "/refinery/html_tag" %>
-  <% site_bar = render('/refinery/site_bar', :head => true) -%>
-  <head>
-    <%= render "/refinery/head" %>
-    <%= render "/refinery/javascripts" %>
-    <%= render "layouts/meta" %>
-  </head>
-  <body id="<%= canonical_id @page %>">
-    <%= site_bar -%>
-    <div id="page_container">
-      <%= render "/refinery/header" -%>
-      <section id="page">
-        <div class="container">
-          <div class="row">
-            <div class="col s12 m9 l10">
-          <%= yield %>
-            </div>
-            <div class="col hide-on-small-only m3 l2">
-              <section id="resume">
-                <%= render "layouts/resume" -%>
-              </section>
-            </div>
+<% site_bar = render('/refinery/site_bar', :head => true) -%>
+<head>
+  <%= render "/refinery/head" %>
+  <%= render "/refinery/javascripts" %>
+  <%= render "layouts/meta" %>
+</head>
+<body id="<%= canonical_id @page %>">
+  <%= site_bar -%>
+  <div id="page_container">
+    <%= render "/refinery/header" -%>
+    <section id="page">
+      <div class="container">
+        <div class="row">
+          <div class="page-resume-mobile">
+            <%= render "layouts/resume_mobile" %>
+          </div>
+          <div class="page-main">
+            <%= yield %>
+          </div>
+          <div class="page-resume">
+            <section id="resume">
+              <%= render "layouts/resume" -%>
+            </section>
           </div>
         </div>
-      </section>
-      <%= render "/refinery/footer" -%>
-    </div>
-  </body>
+      </div>
+    </section>
+    <%= render "/refinery/footer" -%>
+  </div>
+</body>
 </html>
