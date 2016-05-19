@@ -28,8 +28,17 @@ p {
   padding-bottom: 1em;
 }
 
+#resume,
 .page {
-  padding-top: 35px;
+  padding-top: 2em;
+}
+
+#resume {
+  margin-left: 2em;
+}
+
+.resume-heading {
+  @extend .grey-text, .text-darken-3;
 }
 
 .page-card {

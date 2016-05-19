@@ -12,7 +12,16 @@
       <%= render "/refinery/header" -%>
       <section id="page">
         <div class="container">
+          <div class="row">
+            <div class="col s12 m9 l10">
           <%= yield %>
+            </div>
+            <div class="col hide-on-small-only m3 l2">
+              <section id="resume">
+                <%= render "layouts/resume" -%>
+              </section>
+            </div>
+          </div>
         </div>
       </section>
       <%= render "/refinery/footer" -%>
