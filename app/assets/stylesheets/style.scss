@@ -40,6 +40,22 @@ p {
   @extend .flow-text;
 }
 
+.project-card {
+  @extend .card, .hoverable;
+}
+
+.project-content {
+  @extend .card-content, .flow-text;
+}
+
+.project-title {
+  @extend .card-title;
+}
+
+.project-action {
+  @extend .card-action;
+}
+
 #blog-post {
   padding-top: 50px;
 }

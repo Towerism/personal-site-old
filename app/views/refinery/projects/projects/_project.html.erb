@@ -1,0 +1,13 @@
+<div class="col s12">
+  <div class="project-card">
+    <div class="project-content">
+      <div class="project-title">
+        <h4><%=raw project.title %></h4>
+      </div>
+      <%=raw project.description %>
+    </div>
+    <div class="project-action">
+      <%= link_to project.link_text, project.link %>
+    </div>
+  </div>
+</div>
