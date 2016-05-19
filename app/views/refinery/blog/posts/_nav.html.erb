@@ -18,7 +18,7 @@
 
   <% if @post.next.present? -%>
     <div class="blog-nav">
-      <%= link_to refinery.blog_post_path(@post.next), :class => "article-button" do %>
+      <%= link_to refinery.blog_post_path(@post.next) do %>
         <div class="next-article">
           <div class="next-article-content">
             <div class="next-article-link">

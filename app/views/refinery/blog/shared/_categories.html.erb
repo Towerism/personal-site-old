@@ -1,0 +1,18 @@
+<% if @categories.any? %>
+  <div class="blog-side-section">
+    <div class="blog-side-card">
+      <div class="blog-side-card-content">
+        <div class="blog-side-card-title">
+          <h4><%= t('.title') %></h4>
+        </div>
+        <ul id='categories'>
+          <% @categories.each do |category| %>
+            <li<%= " class='selected'" if @category.present? and @category.id == category.id %>>
+              <%= link_to "#{category.title} (#{category.post_count})", refinery.blog_category_path(category) %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+<% end %>

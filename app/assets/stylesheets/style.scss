@@ -10,6 +10,7 @@
 
 body {
   @extend .grey, .lighten-4;
+  font-size: 20px;
 }
 
 .icon-block {
@@ -44,22 +45,36 @@ p {
 }
 
 .post-container {
-  @extend .card, .z-depth-1;
+  @extend .card, .z-depth-2;
 }
 
 .post-content {
   @extend .container;
   margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.post-header {
+  margin-bottom: 0.5em;
 } 
+
+.posted-at {
+  @extend .grey-text, .text-lighten-1;
+  font-weight: 500;
+}
 
 .post-title {
   @extend .card-title;
   margin-top: -0.7em;
 }
 
-.posted-at {
-  @extend .grey-text, .text-lighten-1;
-  font-weight: 500;
+.filed-in,
+.post-source {
+  @extend .grey-text;
+  a {
+    @extend .blue-text, .text-lighten-2;
+    font-weight: 300;
+  }
 }
 
 .blog-author {
@@ -70,8 +85,10 @@ p {
   padding-top: 1em;
 }
 
-.filed-in {
-  @extend .flow-text;
+.filed-in-description {
+}
+
+.filed-in-category {
 }
 
 .blog-nav-container {
@@ -85,7 +102,6 @@ p {
 .prev-article,
 .next-article {
   @extend .card-panel, .hoverable;
-  width: 100%;
 }
 
 .next-article {
@@ -111,7 +127,7 @@ p {
 }
 
 .comments-container {
-  @extend .card;
+  @extend .card, .z-depth-2;
 }
 
 .comments-header {
@@ -165,6 +181,31 @@ p {
 
 .comment-field, .comment-actions {
   @extend .col, .s12, .input-field;
+}
+
+.rss-card {
+  @extend .hoverable;
+}
+
+.blog-side-section {
+  @extend .col, .s12;
+}
+
+.blog-side-card {
+  @extend .card-panel;
+}
+
+.blog-side-card-content {
+  @extend .card-content;
+}
+
+.blog-side-card-title {
+  @extend .card-title, .grey-text, .text-darken-1;
+}
+
+.blog-inline-link {
+  display: inline-block;
+  margin-right: 0.5em;
 }
 
 #social-icons {

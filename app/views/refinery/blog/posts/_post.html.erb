@@ -9,35 +9,34 @@
       <div class="post-container">
         <div class="card-content flow-text">
           <div class="post-content">
-            <header>
+            <div class="post-header">
               <time datetime="<%=l @post.published_at.to_date, :format => :default %>" class='posted-at'>
                 <%= t('created_at', :scope => 'refinery.blog.shared.posts', :when => l(@post.published_at.to_date, :format => :long)) %>
               </time>
               <div class="post-title">
                 <h3><%= @post.title %></h3>
               </div>
+              <div class="filed-in">
+                <% if (categories = @post.categories).any? %>
+                  <span class="filed-in-description">
+                    <%= t('filled_in', :scope => 'refinery.blog.posts.show') %>
+                  </span>
+                  <% categories.each_with_index do |category, index| %>
+                    <%= link_to category.title, refinery.blog_category_path(category),
+                    :class => "filed-in-category" -%><%= ',' if index < (categories.size - 1) %>
+                  <% end %>
+                <% end %>
+              </div>
               <% if @post.source_url.present? %>
-                <div class='blog_source'>
+                <div class='post-source'>
                   <%= "#{t('source', :scope => 'refinery.blog.posts.show')}: " %>
                   <%= link_to (@post.source_url_title.blank? ? @post.source_url : @post.source_url_title), @post.source_url %>
                 </div>
               <% end %>
-            </header>
-            <div class="post-body">
-                <%= @post.body.html_safe %>
             </div>
-          </div>
-        </div>
-        <div class="card-action">
-          <div class="container">
-            <% if (categories = @post.categories).any? %>
-              <aside class='filed-in'>
-                <%= t('filled_in', :scope => 'refinery.blog.posts.show') %>
-                <% categories.each_with_index do |category, index| %>
-                  <%= link_to category.title, refinery.blog_category_path(category) -%><%= ',' if index < ((categories.length) - 1) %>
-                <% end %>
-              </aside>
-            <% end %>
+            <div class="post-body">
+              <%= @post.body.html_safe %>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,14 @@
+<div class="blog-side-section">
+  <%= link_to refinery.blog_rss_feed_path do %>
+    <div class="blog-side-card rss-card">
+      <div class="blog-side-card-content">
+        <div class="blog-side-card-title">
+          <h4><%= t('.title') %></h4>
+        </div>
+        <%= t('.subscribe') %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<% content_for :meta, auto_discovery_link_tag(:atom, refinery.blog_rss_feed_url, :title => 'RSS Feed') -%>

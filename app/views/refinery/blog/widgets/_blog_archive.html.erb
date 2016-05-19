@@ -1,0 +1,14 @@
+<div class="blog-side-section" id="blog_archive_widget">
+  <div class="blog-side-card">
+    <div class="blog-side-card-content">
+      <div class="blog-side-card-title">
+        <h4><%= t('archives', :scope => 'refinery.blog.shared') %></h4>
+      </div>
+      <% links.each_with_index do |link, index| %>
+        <div class="blog-inline-link">
+          <%= link %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

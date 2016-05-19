@@ -1,0 +1,16 @@
+<% if @tags.any? %>
+  <div class="blog-side-section">
+    <div class="blog-side-card">
+      <div class="blog-side-card-content">
+        <div class="blog-side-card-title" id="tags">
+          <h4><%= t('.title') %></h4>
+        </div>
+        <% tag_cloud(@tags, %w(tag1 tag2 tag3 tag4)) do |tag, css_class| %>
+          <div class="blog-inline-link">
+          <%= link_to tag.name, refinery.blog_tagged_posts_path(tag.id, tag.name.parameterize), :class => css_class %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
