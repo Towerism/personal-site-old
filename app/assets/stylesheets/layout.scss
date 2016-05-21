@@ -1,0 +1,92 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+@import "materialize";
+
+body {
+  @extend .grey, .lighten-4;
+  font-size: 20px;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+.top-bar {
+  @extend .light-blue, .text-lighten-1;
+}
+
+p {
+  padding-bottom: 1em;
+}
+
+.page {
+  margin-top: 2em;
+}
+
+.page-resume-mobile {
+  @extend .center-align, .hide-on-large-only;
+}
+
+.resume-dropdown {
+  margin-top: 1em;
+}
+
+.resume-button {
+  @extend .btn, .grey, .darken-1;
+}
+
+#resume {
+  width: 100%;
+  margin-top: 3em;
+  margin-left: 1em;
+}
+
+.page-main {
+  @extend .col, .m12, .l9;
+}
+
+.page-resume {
+  @extend .col, .hide-on-med-and-down, .m12, .l3;
+}
+
+.resume-heading {
+  @extend .grey-text, .text-darken-3;
+}
+
+.page-card {
+  @extend .light-blue, .lighten-4;
+}
+
+.page-content > p {
+  @extend .flow-text;
+}
+
+#social-icons {
+  display: inline;
+}
+
+.social-padding {
+  display: inline;
+  padding: 3px;
+}
+
+.social-btn {
+  @extend .white;
+}
+
+.social-icon {
+  @extend .orange-text;
+}
+
+.bottom-bar {
+  @extend .orange, .center-align;
+}

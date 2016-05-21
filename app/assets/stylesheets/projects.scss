@@ -1,0 +1,17 @@
+@import "materialize";
+
+.project-card {
+  @extend .card, .hoverable;
+}
+
+.project-content {
+  @extend .card-content, .flow-text;
+}
+
+.project-title {
+  @extend .card-title;
+}
+
+.project-action {
+  @extend .card-action;
+}
