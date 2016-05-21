@@ -19,7 +19,7 @@ module Refinery
       self.active_css = :active
       self.selected_css = :active
       self.list_tag_mobile_id = 'nav-mobile'
-      self.list_tag_mobile_css = 'side-nav'
+      self.list_tag_mobile_css = 'right side-nav'
       self.list_tag_regular_css = 'right hide-on-med-and-down'
       self.dropdown_list_css = 'dropdown-content'
       self.dropdown_link_css = 'dropdown-button'

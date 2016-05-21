@@ -1,7 +1,9 @@
 (function($){
   $(function(){
 
-    $('.button-collapse').sideNav();
+    $('.button-collapse').sideNav({
+      edge: 'right'
+    });
     $(".dropdown-button").dropdown({ hover: true,
                                      belowOrigin: true });
     $('.resume-section').pushpin({ top: $('.resume-section').offset().top });
